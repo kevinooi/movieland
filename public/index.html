@@ -36,15 +36,15 @@
           gyroControls: true,
           minHeight: 200.0,
           minWidth: 200.0,
-          scale: 1.0,
+          scale: 2.0,
           scaleMobile: 1.0,
           backgroundAlpha: 0.0,
           color1: 0x146a79,
           wingSpan: 40.0,
-          separation: 100.0,
+          separation: 150.0,
           alignment: 77.0,
-          cohesion: 5.0,
-          quantity: 2.5,
+          cohesion: 10.0,
+          quantity: 3.5,
         });
 
         setTimeout(() => {
@@ -58,7 +58,17 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="vanta"></div>
-    <div id="root"></div>
+    <main
+      style="
+        position: relative;
+        opacity: 0;
+        filter: blur(10px);
+        transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+      "
+    >
+      <div id="root"></div>
+    </main>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
