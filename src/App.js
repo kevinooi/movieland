@@ -18,7 +18,7 @@ const App = () => {
     } else {
       setMovies([]);
     }
-    console.log(data.Search);
+    // console.log(data.Search);
   };
 
   useEffect(() => {
@@ -68,8 +68,8 @@ const App = () => {
         </div>
       ) : (
         <div className="container">
-          {movies.map((m) => (
-            <MovieCard movie={m} />
+          {movies.map((m, i) => (
+            <MovieCard movie={m} key={i} />
           ))}
         </div>
       )}
